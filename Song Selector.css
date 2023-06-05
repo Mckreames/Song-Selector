@@ -1,3 +1,74 @@
 * {
 margin: none;
 }
+
+body {
+    background-color: purple;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+div {
+    background-color: rgb(68, 10, 68);
+}
+
+h1 {
+    text-align: center;
+    font-family: fantasy;
+    font-size: 55px;
+    color: rgb(240, 230, 165);
+    font-weight: 10px;
+    text-decoration: underline;
+}
+
+.shuffle-box {
+    /* width: 100%; */
+    /* border-radius: 100px; */
+    /* color: rgb(240, 230, 165); */
+    padding: 5%;
+}
+
+.result {
+    border: 1px solid black;
+    /* background-color: rgb(240, 230, 165); */
+    background-color: white;
+    border-radius: 15px;
+    width: 45%;
+    display: inline-block;
+    text-align: justify;
+}
+
+.previous {
+    display: flex;
+    justify-content: center;
+}
+
+.result-six {
+    border: 1px solid black;
+    /* background-color: rgb(240, 230, 165); */
+    background-color: white;
+    border-radius: 15px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.one {
+    float: left;
+}
+
+.two {
+    float: right;
+}
+
+.three {
+    float: left;
+}
+
+.four {
+    float: right;
+}
+
+.five {
+    margin-left: 27.5%;
+
+}
