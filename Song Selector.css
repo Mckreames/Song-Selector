@@ -6,12 +6,19 @@ margin: none;
 
 body {
     /* background-image: linear-gradient(to top, purple, white); */
-    background-color: rgb(230, 234, 241);
+    background: linear-gradient(28deg, rgb(66, 68, 71), rgb(168, 169, 171) 30%);
     margin-left: 10%;
     margin-right: 10%;
-    padding-bottom: 5rem;
     /* margin: auto; */
-    /* border: 1px solid black; */
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.page {
+    /* background-color:rgb(206, 215, 232); */
+    background-color:rgb(147, 170, 212);
+    padding-bottom: 5rem;
+    border-radius: 15px;
 }
 
 .purple {
@@ -24,9 +31,18 @@ h1 {
     text-align: center;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 55px;
-    color: rgb(6, 6, 82);
+    /* color: rgb(6, 6, 82); */
+    color: rgb(230, 234, 241);
     font-weight: 10px;
     text-decoration: underline;
+    background-color: rgb(6, 6, 82);
+    margin: 0;
+    padding: 2rem;
+    border-radius: 15px 15px 0 0;
+}
+
+p {
+    color:rgb(6, 6, 82);
 }
 
 .shuffle-box {
@@ -51,6 +67,10 @@ h1 {
     margin: .1rem auto;
     font-size: 2rem;
     /* font-stretch: wider; */
+}
+
+hr {
+    border: 1px solid black;
 }
 
 .result {
@@ -118,6 +138,7 @@ img {
 .interaction {
     display: flex;
     align-content: space-between;
+    margin-top: 2rem;
 }
 
 .interaction-btn {
