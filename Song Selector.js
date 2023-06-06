@@ -29,35 +29,35 @@ let songNumber = ``;
 
 const song0 = {
   title: `It's So Amazing`,
-  artist: ``,
+  artist: `.`,
   key: `C - C#`,
   bpm: 109,
 };
 
 const song1 = {
   title: `How He Loves Us`,
-  artist: ``,
+  artist: `.`,
   key: `E`,
   bpm: 124,
 };
 
 const song2 = {
   title: `You Thought I Was Worth Saving`,
-  artist: ``,
+  artist: `.`,
   key: `D`,
   bpm: 114,
 };
 
 const song3 = {
   title: `Deserve It`,
-  artist: ``,
+  artist: `.`,
   key: `Gb`,
   bpm: 175,
 };
 
 const song4 = {
   title: `Good Good Father`,
-  artist: ``,
+  artist: `.`,
   key: `A`,
   bpm: 176,
 };
@@ -73,8 +73,8 @@ shuffle.addEventListener(`click`, function () {
   songNumber = Math.trunc(Math.random() * 4) + 1;
   pickSong(songNumber);
 
-  title1.textContent = songChoice.title;
-  artist1.textContent = songChoice.artist;
-  key1.textContent = songChoice.key;
-  bpm1.textContent = songChoice.bpm;
+  title1.textContent = `Title: ${songChoice.title}`;
+  artist1.textContent = `Artist: ${songChoice.artist}`;
+  key1.textContent = `Key: ${songChoice.key}`;
+  bpm1.textContent = `BPM: ${songChoice.bpm}`;
 });
