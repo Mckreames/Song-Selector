@@ -24,8 +24,15 @@ let bpm3 = document.querySelector(`.bpm3`);
 let bpm4 = document.querySelector(`.bpm4`);
 let bpm5 = document.querySelector(`.bpm5`);
 
+let pre1 = document.querySelector(`.pre1`);
+let pre2 = document.querySelector(`.pre2`);
+let pre3 = document.querySelector(`.pre3`);
+let pre4 = document.querySelector(`.pre4`);
+let pre5 = document.querySelector(`.pre5`);
+
 let shuffle = document.querySelector(`.shuffle-btn`);
 let songNumber = ``;
+let x = [];
 
 const song0 = {
   title: `It's So Amazing`,
@@ -66,17 +73,77 @@ const arr = [song0, song1, song2, song3, song4];
 
 const pickSong = function (songNumber) {
   songChoice = arr[songNumber];
+  console.log(songChoice);
   return songChoice;
 };
 
 shuffle.addEventListener(`click`, function () {
-  // if (((i = 0), i <= 4, i++)) {
+  for (i = 1; i <= 5; i++) {
     songNumber = Math.trunc(Math.random() * 4) + 1;
     pickSong(songNumber);
 
-    title1.textContent = `Title: ${songChoice.title}`;
-    artist1.textContent = `Artist: ${songChoice.artist}`;
-    key1.textContent = `Key: ${songChoice.key}`;
-    bpm1.textContent = `BPM: ${songChoice.bpm}`;
-  // }
+    if (i == 1) {
+      //   if (songChoice = undefined) {
+      //     songNumber = Math.trunc(Math.random() * 4) + 1;
+      //     pickSong(songNumber);
+      //   } else {
+      pre1.textContent = title1.textContent;
+      title1.textContent = `Title: ${songChoice.title}`;
+      artist1.textContent = `Artist: ${songChoice.artist}`;
+      key1.textContent = `Key: ${songChoice.key}`;
+      bpm1.textContent = `BPM: ${songChoice.bpm}`;
+      // delete arr[songNumber];
+      // }
+    } else if (i == 2) {
+      // if (songChoice = undefined) {
+      //   songNumber = Math.trunc(Math.random() * 4) + 1;
+      //   pickSong(songNumber);
+      // } else {
+      pre2.textContent = title2.textContent;
+      title2.textContent = `Title: ${songChoice.title}`;
+      artist2.textContent = `Artist: ${songChoice.artist}`;
+      key2.textContent = `Key: ${songChoice.key}`;
+      bpm2.textContent = `BPM: ${songChoice.bpm}`;
+      // delete arr[songNumber];
+      // }
+    } else if (i == 3) {
+      // if (songChoice = undefined) {
+      //   songNumber = Math.trunc(Math.random() * 4) + 1;
+      //   pickSong(songNumber);
+      // } else {
+      pre3.textContent = title3.textContent;
+      title3.textContent = `Title: ${songChoice.title}`;
+      artist3.textContent = `Artist: ${songChoice.artist}`;
+      key3.textContent = `Key: ${songChoice.key}`;
+      bpm3.textContent = `BPM: ${songChoice.bpm}`;
+      // delete arr[songNumber];
+      // }
+    } else if (i == 4) {
+      // if (songChoice = undefined) {
+      //   songNumber = Math.trunc(Math.random() * 4) + 1;
+      //   pickSong(songNumber);
+      // } else {
+      pre4.textContent = title4.textContent;
+      title4.textContent = `Title: ${songChoice.title}`;
+      artist4.textContent = `Artist: ${songChoice.artist}`;
+      key4.textContent = `Key: ${songChoice.key}`;
+      bpm4.textContent = `BPM: ${songChoice.bpm}`;
+      // delete arr[songNumber];
+      // }
+    } else {
+      // if (songChoice = undefined) {
+      //   songNumber = Math.trunc(Math.random() * 4) + 1;
+      //   pickSong(songNumber);
+      // } else {
+      pre5.textContent = title5.textContent;
+      title5.textContent = `Title: ${songChoice.title}`;
+      artist5.textContent = `Artist: ${songChoice.artist}`;
+      key5.textContent = `Key: ${songChoice.key}`;
+      bpm5.textContent = `BPM: ${songChoice.bpm}`;
+      // delete arr[songNumber];
+      // }
+    }
+  }
+  console.log(x);
+  const current = 0;
 });
