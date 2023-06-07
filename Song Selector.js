@@ -70,11 +70,13 @@ const pickSong = function (songNumber) {
 };
 
 shuffle.addEventListener(`click`, function () {
-  songNumber = Math.trunc(Math.random() * 4) + 1;
-  pickSong(songNumber);
+  // if (((i = 0), i <= 4, i++)) {
+    songNumber = Math.trunc(Math.random() * 4) + 1;
+    pickSong(songNumber);
 
-  title1.textContent = `Title: ${songChoice.title}`;
-  artist1.textContent = `Artist: ${songChoice.artist}`;
-  key1.textContent = `Key: ${songChoice.key}`;
-  bpm1.textContent = `BPM: ${songChoice.bpm}`;
+    title1.textContent = `Title: ${songChoice.title}`;
+    artist1.textContent = `Artist: ${songChoice.artist}`;
+    key1.textContent = `Key: ${songChoice.key}`;
+    bpm1.textContent = `BPM: ${songChoice.bpm}`;
+  // }
 });
