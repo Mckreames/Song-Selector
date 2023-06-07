@@ -33,6 +33,7 @@ let pre5 = document.querySelector(`.pre5`);
 let shuffle = document.querySelector(`.shuffle-btn`);
 let songNumber = ``;
 let x = [];
+let n = 4;
 
 const song0 = {
   title: `It's So Amazing`,
@@ -73,13 +74,12 @@ const arr = [song0, song1, song2, song3, song4];
 
 const pickSong = function (songNumber) {
   songChoice = arr[songNumber];
-  console.log(songChoice);
   return songChoice;
 };
 
 shuffle.addEventListener(`click`, function () {
   for (i = 1; i <= 5; i++) {
-    songNumber = Math.trunc(Math.random() * 4) + 1;
+    songNumber = Math.trunc(Math.random() * n) + 1;
     pickSong(songNumber);
 
     if (i == 1) {
@@ -92,7 +92,8 @@ shuffle.addEventListener(`click`, function () {
       artist1.textContent = `Artist: ${songChoice.artist}`;
       key1.textContent = `Key: ${songChoice.key}`;
       bpm1.textContent = `BPM: ${songChoice.bpm}`;
-      // delete arr[songNumber];
+      x = arr.splice(songChoice, songChoice);
+      n--;
       // }
     } else if (i == 2) {
       // if (songChoice = undefined) {
@@ -104,7 +105,8 @@ shuffle.addEventListener(`click`, function () {
       artist2.textContent = `Artist: ${songChoice.artist}`;
       key2.textContent = `Key: ${songChoice.key}`;
       bpm2.textContent = `BPM: ${songChoice.bpm}`;
-      // delete arr[songNumber];
+      x = arr.splice(songChoice, songChoice);
+      n--;
       // }
     } else if (i == 3) {
       // if (songChoice = undefined) {
@@ -116,7 +118,8 @@ shuffle.addEventListener(`click`, function () {
       artist3.textContent = `Artist: ${songChoice.artist}`;
       key3.textContent = `Key: ${songChoice.key}`;
       bpm3.textContent = `BPM: ${songChoice.bpm}`;
-      // delete arr[songNumber];
+      x = arr.splice(songChoice, songChoice);
+      n--;
       // }
     } else if (i == 4) {
       // if (songChoice = undefined) {
@@ -128,7 +131,8 @@ shuffle.addEventListener(`click`, function () {
       artist4.textContent = `Artist: ${songChoice.artist}`;
       key4.textContent = `Key: ${songChoice.key}`;
       bpm4.textContent = `BPM: ${songChoice.bpm}`;
-      // delete arr[songNumber];
+      x = arr.splice(songChoice, songChoice);
+      n--;
       // }
     } else {
       // if (songChoice = undefined) {
@@ -140,10 +144,10 @@ shuffle.addEventListener(`click`, function () {
       artist5.textContent = `Artist: ${songChoice.artist}`;
       key5.textContent = `Key: ${songChoice.key}`;
       bpm5.textContent = `BPM: ${songChoice.bpm}`;
-      // delete arr[songNumber];
+      x = arr.splice(songChoice, songChoice);
+      n--;
       // }
     }
   }
   console.log(x);
-  const current = 0;
 });
