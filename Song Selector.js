@@ -33,6 +33,7 @@ let pre5 = document.querySelector(`.pre5`);
 let shuffle = document.querySelector(`.shuffle-btn`);
 let songNumber = ``;
 let x = [];
+let y = [];
 let n = 4;
 
 const song0 = {
@@ -83,16 +84,16 @@ shuffle.addEventListener(`click`, function () {
     pickSong(songNumber);
 
     if (i == 1) {
-      //   if (songChoice = undefined) {
-      //     songNumber = Math.trunc(Math.random() * 4) + 1;
-      //     pickSong(songNumber);
-      //   } else {
+      // if ((songChoice = undefined)) {
+      //   songNumber = Math.trunc(Math.random() * 4) + 1;
+      //   pickSong(songNumber);
+      // } else {
       pre1.textContent = title1.textContent;
       title1.textContent = `Title: ${songChoice.title}`;
       artist1.textContent = `Artist: ${songChoice.artist}`;
       key1.textContent = `Key: ${songChoice.key}`;
       bpm1.textContent = `BPM: ${songChoice.bpm}`;
-      x = arr.splice(songChoice, songChoice);
+      // x = arr.delete(songChoice, songChoice);
       n--;
       // }
     } else if (i == 2) {
@@ -105,7 +106,7 @@ shuffle.addEventListener(`click`, function () {
       artist2.textContent = `Artist: ${songChoice.artist}`;
       key2.textContent = `Key: ${songChoice.key}`;
       bpm2.textContent = `BPM: ${songChoice.bpm}`;
-      x = arr.splice(songChoice, songChoice);
+      //   x = arr.delete(songChoice, songChoice);
       n--;
       // }
     } else if (i == 3) {
@@ -118,7 +119,7 @@ shuffle.addEventListener(`click`, function () {
       artist3.textContent = `Artist: ${songChoice.artist}`;
       key3.textContent = `Key: ${songChoice.key}`;
       bpm3.textContent = `BPM: ${songChoice.bpm}`;
-      x = arr.splice(songChoice, songChoice);
+      //   x = arr.delete(songChoice, songChoice);
       n--;
       // }
     } else if (i == 4) {
@@ -131,7 +132,7 @@ shuffle.addEventListener(`click`, function () {
       artist4.textContent = `Artist: ${songChoice.artist}`;
       key4.textContent = `Key: ${songChoice.key}`;
       bpm4.textContent = `BPM: ${songChoice.bpm}`;
-      x = arr.splice(songChoice, songChoice);
+      //   x = arr.delete(songChoice, songChoice);
       n--;
       // }
     } else {
@@ -144,7 +145,7 @@ shuffle.addEventListener(`click`, function () {
       artist5.textContent = `Artist: ${songChoice.artist}`;
       key5.textContent = `Key: ${songChoice.key}`;
       bpm5.textContent = `BPM: ${songChoice.bpm}`;
-      x = arr.splice(songChoice, songChoice);
+      //   x = arr.delete(songChoice, songChoice);
       n--;
       // }
     }
