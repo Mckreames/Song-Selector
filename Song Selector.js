@@ -34,7 +34,6 @@ let shuffle = document.querySelector(`.shuffle-btn`);
 let songNumber = ``;
 let x = [];
 let y = [];
-let n = 4;
 
 const song0 = {
   title: `It's So Amazing`,
@@ -68,87 +67,156 @@ const song4 = {
   title: `Good Good Father`,
   artist: `.`,
   key: `A`,
+  bpm: 145,
+};
+
+const song5 = {
+  title: `Lord You're Mighty`,
+  artist: `.`,
+  key: `G`,
   bpm: 176,
 };
 
-const arr = [song0, song1, song2, song3, song4];
+const song6 = {
+  title: `How Great is Our God`,
+  artist: `.`,
+  key: `Db`,
+  bpm: 156,
+};
+
+const song7 = {
+  title: `Let it Rise`,
+  artist: `.`,
+  key: `G`,
+  bpm:  92,
+};
+
+const song8 = {
+  title: `My God is Awesome`,
+  artist: `.`,
+  key: `E`,
+  bpm: 128,
+};
+
+
+const song9 = {
+  title: `Way Maker`,
+  artist: `Sinach`,
+  key: `E`,
+  bpm: 132,
+};
+
+const song10 = {
+  title: `Reckless Love`,
+  artist: ``,
+  key: `Gb`,
+  bpm: 111,
+};
+
+const song11 = {
+  title: `Oceans`,
+  artist: `.`,
+  key: `D`,
+  bpm: 127,
+};
+
+const song12 = {
+  title: `Holy Spirit You Are Welcome Here`,
+  artist: `Elevation worship`,
+  key: `D`,
+  bpm: 144,
+};
+
+const song13 = {
+  title: `The Anthem`, //Hallelujah You Have Won The Victory
+  artist: '.',
+  key: `F`,
+  bpm: 147,
+};
+
+const song14 = {
+  title: `Pressed Down Shaken Together`,
+  artist: `.`,
+  key: `Bb`,
+  bpm: 99,
+};
+
+const song15 = {
+  title: `Psalm 23`,
+  artist: `.`,
+  key: `E`,
+  bpm: 63,
+};
+
+const song16 = {
+  title: `He's Able`,
+  artist: `.`,
+  key: `B`,
+  bpm: 115,
+};
+
+
+const arr = [song0, song1, song2, song3, song4, song5, song6, song7, song8, song9, song10, song11, song12, song13, song14, song15, song16];
+let n = arr.length + 1;
 
 const pickSong = function (songNumber) {
-  songChoice = arr[songNumber];
+  songChoice = arr[songNumber]; // Use number given to search arr and return the song object chosen
   return songChoice;
 };
 
 shuffle.addEventListener(`click`, function () {
   for (i = 1; i <= 5; i++) {
-    songNumber = Math.trunc(Math.random() * n) + 1;
+    songNumber = Math.trunc(Math.random() * n) + 1; //On "click", pick random number up to arr length, truncate it, call pickSong func with it.
     pickSong(songNumber);
 
-    if (i == 1) {
-      // if ((songChoice = undefined)) {
-      //   songNumber = Math.trunc(Math.random() * 4) + 1;
-      //   pickSong(songNumber);
-      // } else {
+    if (i === 1) {
       pre1.textContent = title1.textContent;
       title1.textContent = `Title: ${songChoice.title}`;
       artist1.textContent = `Artist: ${songChoice.artist}`;
       key1.textContent = `Key: ${songChoice.key}`;
       bpm1.textContent = `BPM: ${songChoice.bpm}`;
-      // x = arr.delete(songChoice, songChoice);
       n--;
-      // }
-    } else if (i == 2) {
-      // if (songChoice = undefined) {
-      //   songNumber = Math.trunc(Math.random() * 4) + 1;
-      //   pickSong(songNumber);
-      // } else {
+    } else if (i === 2) {
       pre2.textContent = title2.textContent;
       title2.textContent = `Title: ${songChoice.title}`;
       artist2.textContent = `Artist: ${songChoice.artist}`;
       key2.textContent = `Key: ${songChoice.key}`;
       bpm2.textContent = `BPM: ${songChoice.bpm}`;
-      //   x = arr.delete(songChoice, songChoice);
       n--;
-      // }
-    } else if (i == 3) {
-      // if (songChoice = undefined) {
-      //   songNumber = Math.trunc(Math.random() * 4) + 1;
-      //   pickSong(songNumber);
-      // } else {
+    } else if (i === 3) {
       pre3.textContent = title3.textContent;
       title3.textContent = `Title: ${songChoice.title}`;
       artist3.textContent = `Artist: ${songChoice.artist}`;
       key3.textContent = `Key: ${songChoice.key}`;
       bpm3.textContent = `BPM: ${songChoice.bpm}`;
-      //   x = arr.delete(songChoice, songChoice);
       n--;
-      // }
-    } else if (i == 4) {
-      // if (songChoice = undefined) {
-      //   songNumber = Math.trunc(Math.random() * 4) + 1;
-      //   pickSong(songNumber);
-      // } else {
+    } else if (i === 4) {
       pre4.textContent = title4.textContent;
       title4.textContent = `Title: ${songChoice.title}`;
       artist4.textContent = `Artist: ${songChoice.artist}`;
       key4.textContent = `Key: ${songChoice.key}`;
       bpm4.textContent = `BPM: ${songChoice.bpm}`;
-      //   x = arr.delete(songChoice, songChoice);
       n--;
-      // }
     } else {
-      // if (songChoice = undefined) {
-      //   songNumber = Math.trunc(Math.random() * 4) + 1;
-      //   pickSong(songNumber);
-      // } else {
+
       pre5.textContent = title5.textContent;
       title5.textContent = `Title: ${songChoice.title}`;
       artist5.textContent = `Artist: ${songChoice.artist}`;
       key5.textContent = `Key: ${songChoice.key}`;
       bpm5.textContent = `BPM: ${songChoice.bpm}`;
-      //   x = arr.delete(songChoice, songChoice);
       n--;
-      // }
     }
   }
   console.log(x);
 });
+
+
+///////////////////////////////////////////////////
+// Broken Loop
+      // if ((songChoice = undefined)) {
+      //   songNumber = Math.trunc(Math.random() * 4) + 1;
+      //   pickSong(songNumber);
+      // } else {
+      // parent if statement content
+      // x = arr.delete(songChoice, songChoice);
+      // }
