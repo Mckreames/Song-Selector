@@ -36,6 +36,7 @@ let pre5 = document.querySelector(`.pre5`);
 
 let shuffle = document.querySelector(`.shuffle-btn`);
 let songNumber = ``;
+let w = 0;
 let x = [];
 let y = [];
 
@@ -177,29 +178,47 @@ const arr = [
   song15,
   song16,
 ];
-let n = arr.length + 1;
+let n;
 
 const pickSong = function (songNumber) {
   songChoice = arr[songNumber]; // Use number given to search arr and return the song object chosen
-  console.log(songNumber);
-  console.log(songChoice);
+  // console.log(songNumber);
+  // console.log(songChoice);
   return songChoice;
 };
 
+
+
 shuffle.addEventListener(`click`, function () {
-  for (i = 1; i <= 5; i++) {
-    songNumber = Math.trunc(Math.random() * n) + 1; //On "click", pick random number up to arr length, truncate it, call pickSong func with it.
+  ++w;
+  if (w > 3) {
+    w = 1;
+    y.length = 0;
+  }
+  for (i = 1; i <= 6; i++) {
+    //On "click", pick random number up to arr length, truncate it, call pickSong func with it.
+    songNumber = Math.trunc(Math.random() * arr.length);
+    // check if the number has already been chosen in this click or the past three clicks
+    const numCheck = function (songNumber) {
+      if (y.includes(songNumber) || x.includes(songNumber)) {
+        songNumber = Math.trunc(Math.random() * arr.length);
+        numCheck(songNumber);
+      } else {
+        x.unshift(songNumber);
+        y.unshift(songNumber);
+        console.log(y);
+      }
+    };
+    // numCheck(songNumber);
     pickSong(songNumber);
 
     if (i === 1) {
-      if (songChoice <= (arr.length + 2) && songChoice >= 0) {
       pre1.textContent = title1.textContent;
       title1.textContent = `Title: ${songChoice.title}`;
       artist1.textContent = `Artist: ${songChoice.artist}`;
       key1.textContent = `Key: ${songChoice.key}`;
       bpm1.textContent = `BPM: ${songChoice.bpm}`;
       // n--;
-      };
     } else if (i === 2) {
       pre2.textContent = title2.textContent;
       title2.textContent = `Title: ${songChoice.title}`;
@@ -228,9 +247,12 @@ shuffle.addEventListener(`click`, function () {
       key5.textContent = `Key: ${songChoice.key}`;
       bpm5.textContent = `BPM: ${songChoice.bpm}`;
       // n--;
-    }
+    };
   }
+  x.length = 0;
+  // console.log(w);
   // console.log(x);
+  console.log(y);
 });
 
 ///////////////////////////////////////////////////
