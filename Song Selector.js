@@ -42,63 +42,63 @@ let y = [];
 
 const song0 = {
   title: `It's So Amazing`,
-  artist: `.`,
+  artist: `Hezekiah Walker`,
   key: `C - C#`,
   bpm: 109,
 };
 
 const song1 = {
   title: `How He Loves Us`,
-  artist: `.`,
+  artist: `Anthony Evans`,
   key: `E`,
   bpm: 124,
 };
 
 const song2 = {
   title: `You Thought I Was Worth Saving`,
-  artist: `.`,
+  artist: `Anthony Brown`,
   key: `D`,
   bpm: 114,
 };
 
 const song3 = {
   title: `Deserve It`,
-  artist: `.`,
+  artist: `JJ Hairston`,
   key: `Gb`,
   bpm: 175,
 };
 
 const song4 = {
   title: `Good Good Father`,
-  artist: `.`,
+  artist: `Chris Tomlin`,
   key: `A`,
   bpm: 145,
 };
 
 const song5 = {
   title: `Lord You're Mighty`,
-  artist: `.`,
+  artist: `JJ Hairston`,
   key: `G`,
   bpm: 176,
 };
 
 const song6 = {
   title: `How Great is Our God`,
-  artist: `.`,
+  artist: `Chris Tomlin`,
   key: `Db`,
   bpm: 156,
 };
 
 const song7 = {
   title: `Let it Rise`,
-  artist: `.`,
+  artist: `William Murphy`,
   key: `G`,
   bpm: 92,
 };
 
 const song8 = {
   title: `My God is Awesome`,
-  artist: `.`,
+  artist: `Pastor Charles Jenkins`,
   key: `E`,
   bpm: 128,
 };
@@ -112,49 +112,49 @@ const song9 = {
 
 const song10 = {
   title: `Reckless Love`,
-  artist: ``,
+  artist: `Cory Asbury`,
   key: `Gb`,
   bpm: 111,
 };
 
 const song11 = {
   title: `Oceans`,
-  artist: `.`,
+  artist: `Hillsong United`,
   key: `D`,
   bpm: 127,
 };
 
 const song12 = {
   title: `Holy Spirit You Are Welcome Here`,
-  artist: `Elevation worship`,
+  artist: `Kim Walker-Smith`,
   key: `D`,
   bpm: 144,
 };
 
 const song13 = {
   title: `The Anthem`, //Hallelujah You Have Won The Victory
-  artist: ".",
+  artist: "Todd Dulaney",
   key: `F`,
   bpm: 147,
 };
 
 const song14 = {
   title: `Pressed Down Shaken Together`,
-  artist: `.`,
+  artist: `Joe Pace`,
   key: `Bb`,
   bpm: 99,
 };
 
 const song15 = {
   title: `Psalm 23`,
-  artist: `.`,
+  artist: `People & Songs`,
   key: `E`,
   bpm: 63,
 };
 
 const song16 = {
   title: `He's Able`,
-  artist: `.`,
+  artist: `Deitrick Hadden`,
   key: `B`,
   bpm: 115,
 };
