@@ -3,6 +3,11 @@
 // for (let i = 1; i <= 6; i++) {
 //   let title = document.querySelector(`.title${i}`)
 // };
+let cover1 = document.getElementById(`#img1`);
+let cover2 = document.getElementById(`#img2`);
+let cover3 = document.getElementById(`#img3`);
+let cover4 = document.getElementById(`#img4`);
+let cover5 = document.getElementById(`#img5`);
 
 let title1 = document.querySelector(`.title1`);
 let title2 = document.querySelector(`.title2`);
@@ -45,6 +50,7 @@ const song0 = {
   artist: `Hezekiah Walker`,
   key: `C - C#`,
   bpm: 109,
+  //cover:
 };
 
 const song1 = {
@@ -218,6 +224,7 @@ shuffle.addEventListener(`click`, function () {
       artist1.textContent = `Artist: ${songChoice.artist}`;
       key1.textContent = `Key: ${songChoice.key}`;
       bpm1.textContent = `BPM: ${songChoice.bpm}`;
+      cover1.src=""
       // n--;
     } else if (i === 2) {
       pre2.textContent = title2.textContent;
