@@ -187,28 +187,32 @@ const pickSong = function (songNumber) {
   return songChoice;
 };
 
-
-
 shuffle.addEventListener(`click`, function () {
   ++w;
   if (w > 3) {
     w = 1;
     y.length = 0;
   }
-  for (i = 1; i <= 6; i++) {
-    //On "click", pick random number up to arr length, truncate it, call pickSong func with it.
-    songNumber = Math.trunc(Math.random() * arr.length);
+  for (i = 1; i <= 5; i++) {
     // check if the number has already been chosen in this click or the past three clicks
     const numCheck = function (songNumber) {
-      if (y.includes(songNumber) || x.includes(songNumber)) {
+      if (y.includes(songNumber)) {
         songNumber = Math.trunc(Math.random() * arr.length);
         numCheck(songNumber);
+        return songNumber;
+      } else if (x.includes(songNumber)) {
+        songNumber = Math.trunc(Math.random() * arr.length);
+        numCheck(songNumber);
+        return songNumber;
       } else {
-        x.unshift(songNumber);
-        y.unshift(songNumber);
-        console.log(y);
       }
     };
+    // Pick random number up to arr length, truncate it, and check if result has already been chosen
+    songNumber = Math.trunc(Math.random() * arr.length);
+    numCheck(songNumber);
+    x.unshift(songNumber);
+    y.unshift(songNumber);
+    console.log(y);
     // numCheck(songNumber);
     pickSong(songNumber);
 
@@ -247,11 +251,11 @@ shuffle.addEventListener(`click`, function () {
       key5.textContent = `Key: ${songChoice.key}`;
       bpm5.textContent = `BPM: ${songChoice.bpm}`;
       // n--;
-    };
+    }
   }
   x.length = 0;
-  // console.log(w);
-  // console.log(x);
+  console.log(w);
+  console.log(x);
   console.log(y);
 });
 
