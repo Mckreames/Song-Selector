@@ -44,6 +44,7 @@ let songNumber = ``;
 let w = 0;
 let x = [];
 let y = [];
+var wrkArnd; // Stupid work around to get the songNumber to actually change. Stupid doo doo head.
 
 const song0 = {
   title: `It's So Amazing`,
@@ -186,8 +187,8 @@ const arr = [
 ];
 let n;
 
-const pickSong = function (songNumber) {
-  songChoice = arr[songNumber]; // Use number given to search arr and return the song object chosen
+const pickSong = function (wrkArnd) {
+  songChoice = arr[wrkArnd]; // Use number given to search arr and return the song object chosen
   // console.log(songNumber);
   // console.log(songChoice);
   return songChoice;
@@ -211,16 +212,16 @@ shuffle.addEventListener(`click`, function () {
         numCheck(songNumber);
         return songNumber;
       } else {
+        // Add number to array so it won't be chosen again
+        wrkArnd = songNumber;
+        x.unshift(wrkArnd);
+        y.unshift(wrkArnd);
       }
     };
     // Pick random number up to arr length, truncate it, and check if result has already been chosen
     songNumber = Math.trunc(Math.random() * arr.length);
     numCheck(songNumber);
-    x.unshift(songNumber);
-    y.unshift(songNumber);
-    console.log(y);
-    // numCheck(songNumber);
-    pickSong(songNumber);
+    pickSong(wrkArnd);
 
     if (i === 1) {
       pre1.textContent = title1.textContent;
@@ -228,7 +229,7 @@ shuffle.addEventListener(`click`, function () {
       artist1.textContent = `Artist: ${songChoice.artist}`;
       key1.textContent = `Key: ${songChoice.key}`;
       bpm1.textContent = `BPM: ${songChoice.bpm}`;
-      cover1.src=""
+      // cover1.src=""
       // n--;
     } else if (i === 2) {
       pre2.textContent = title2.textContent;
