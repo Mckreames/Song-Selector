@@ -51,7 +51,7 @@ const song0 = {
   artist: `Hezekiah Walker`,
   key: `C - C#`,
   bpm: 109,
-  //cover:
+  cover: `Album-Covers/Hezekiah Walker.jpg`,
 };
 
 const song1 = {
