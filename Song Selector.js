@@ -39,11 +39,19 @@ let pre3 = document.querySelector(`.pre3`);
 let pre4 = document.querySelector(`.pre4`);
 let pre5 = document.querySelector(`.pre5`);
 
+let result1 = document.querySelector(`.one`);
+let result2 = document.querySelector(`.two`);
+let result3 = document.querySelector(`.three`);
+let result4 = document.querySelector(`.four`);
+let result5 = document.querySelector(`.five`);
+let result6 = document.querySelector(`.result-six`);
+
 let shuffle = document.querySelector(`.shuffle-btn`);
 let songNumber = ``;
-let w = 0;
-let x = [];
-let y = [];
+let s = 0; // hidden class counter
+let w = 0; // button counter
+let x = []; // array to store numbers of current thread
+let y = []; // array to store numbers of the previous 3 threads
 var wrkArnd; // Stupid work around to get the songNumber to actually change. Stupid doo doo head.
 
 const song0 = {
@@ -229,39 +237,50 @@ shuffle.addEventListener(`click`, function () {
       artist1.textContent = `Artist: ${songChoice.artist}`;
       key1.textContent = `Key: ${songChoice.key}`;
       bpm1.textContent = `BPM: ${songChoice.bpm}`;
+      result1.classList.remove(`hidden`);
       // cover1.src=""
-      // n--;
     } else if (i === 2) {
       pre2.textContent = title2.textContent;
       title2.textContent = `Title: ${songChoice.title}`;
       artist2.textContent = `Artist: ${songChoice.artist}`;
       key2.textContent = `Key: ${songChoice.key}`;
       bpm2.textContent = `BPM: ${songChoice.bpm}`;
-      // n--;
+      result2.classList.remove(`hidden`);
     } else if (i === 3) {
       pre3.textContent = title3.textContent;
       title3.textContent = `Title: ${songChoice.title}`;
       artist3.textContent = `Artist: ${songChoice.artist}`;
       key3.textContent = `Key: ${songChoice.key}`;
       bpm3.textContent = `BPM: ${songChoice.bpm}`;
-      // n--;
+      result3.classList.remove(`hidden`);
     } else if (i === 4) {
       pre4.textContent = title4.textContent;
       title4.textContent = `Title: ${songChoice.title}`;
       artist4.textContent = `Artist: ${songChoice.artist}`;
       key4.textContent = `Key: ${songChoice.key}`;
       bpm4.textContent = `BPM: ${songChoice.bpm}`;
-      // n--;
+      result4.classList.remove(`hidden`);
     } else {
       pre5.textContent = title5.textContent;
       title5.textContent = `Title: ${songChoice.title}`;
       artist5.textContent = `Artist: ${songChoice.artist}`;
       key5.textContent = `Key: ${songChoice.key}`;
       bpm5.textContent = `BPM: ${songChoice.bpm}`;
-      // n--;
+      result5.classList.remove(`hidden`);
     }
   }
+  if (s >= 1) {
+    // Remove all the hidden previous results
+    pre1.classList.remove(`hidden`);
+    pre2.classList.remove(`hidden`);
+    pre3.classList.remove(`hidden`);
+    pre4.classList.remove(`hidden`);
+    pre5.classList.remove(`hidden`);
+  } else {
+    s++;
+  }
   x.length = 0;
+  console.log(s);
   console.log(w);
   console.log(x);
   console.log(y);
