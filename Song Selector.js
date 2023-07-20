@@ -67,7 +67,7 @@ const song1 = {
   artist: `Anthony Evans`,
   key: `E`,
   bpm: 124,
-  cover: `Album-Covers/Kim walker-smith.jpg`,
+  cover: `Album-Covers/Anthony Evans.jpg`,
 };
 
 const song2 = {
@@ -253,7 +253,7 @@ shuffle.addEventListener(`click`, function () {
       artist1.textContent = `Artist: ${songChoice.artist}`;
       key1.textContent = `Key: ${songChoice.key}`;
       bpm1.textContent = `BPM: ${songChoice.bpm}`;
-      document.getElementById(`#img1`).src = songChoice.cover;
+      document.getElementById(`img1`).src = songChoice.cover;
       result1.classList.remove(`hidden`);
     } else if (i === 2) {
       pre2.textContent = title2.textContent;
@@ -261,7 +261,7 @@ shuffle.addEventListener(`click`, function () {
       artist2.textContent = `Artist: ${songChoice.artist}`;
       key2.textContent = `Key: ${songChoice.key}`;
       bpm2.textContent = `BPM: ${songChoice.bpm}`;
-      cover2.src = songChoice.cover;
+      document.getElementById(`img2`).src = songChoice.cover;
       result2.classList.remove(`hidden`);
     } else if (i === 3) {
       pre3.textContent = title3.textContent;
@@ -269,7 +269,8 @@ shuffle.addEventListener(`click`, function () {
       artist3.textContent = `Artist: ${songChoice.artist}`;
       key3.textContent = `Key: ${songChoice.key}`;
       bpm3.textContent = `BPM: ${songChoice.bpm}`;
-      cover3.src = songChoice.cover;
+      document.getElementById(`img3`).src = songChoice.cover;
+
       result3.classList.remove(`hidden`);
     } else if (i === 4) {
       pre4.textContent = title4.textContent;
@@ -277,7 +278,8 @@ shuffle.addEventListener(`click`, function () {
       artist4.textContent = `Artist: ${songChoice.artist}`;
       key4.textContent = `Key: ${songChoice.key}`;
       bpm4.textContent = `BPM: ${songChoice.bpm}`;
-      cover4.src = songChoice.cover;
+      document.getElementById(`img4`).src = songChoice.cover;
+
       result4.classList.remove(`hidden`);
     } else {
       pre5.textContent = title5.textContent;
@@ -285,7 +287,8 @@ shuffle.addEventListener(`click`, function () {
       artist5.textContent = `Artist: ${songChoice.artist}`;
       key5.textContent = `Key: ${songChoice.key}`;
       bpm5.textContent = `BPM: ${songChoice.bpm}`;
-      cover5.src = songChoice.cover;
+      document.getElementById(`img5`).src = songChoice.cover;
+      // cover5.src = songChoice.cover; // This didn't work to change img src whatever reason
       result5.classList.remove(`hidden`);
     }
   }
