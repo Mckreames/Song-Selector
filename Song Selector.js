@@ -47,6 +47,11 @@ let result5 = document.querySelector(`.five`);
 let result6 = document.querySelector(`.result-six`);
 
 let shuffle = document.querySelector(`.shuffle-btn`);
+let listContent = document.querySelector(`.song-list`);
+let showSongs = document.querySelector(`.show-btn`);
+let addSongs = document.querySelector(`.add-btn`);
+let deleteSongs = document.querySelector(`.delete-btn`);
+
 let songNumber = ``;
 let s = 0; // hidden class counter
 let w = 0; // button counter
@@ -209,6 +214,26 @@ const arr = [
   song15,
   song16,
 ];
+
+const arrTitles = [
+  song0.title,
+  song1.title,
+  song2.title,
+  song3.title,
+  song4.title,
+  song5.title,
+  song6.title,
+  song7.title,
+  song8.title,
+  song9.title,
+  song10.title,
+  song11.title,
+  song12.title,
+  song13.title,
+  song14.title,
+  song15.title,
+  song16.title,
+];
 let n;
 
 const pickSong = function (wrkArnd) {
@@ -308,6 +333,21 @@ shuffle.addEventListener(`click`, function () {
   console.log(x);
   console.log(y);
 });
+
+let a = 0; // If a = 0, list is hidden
+showSongs.addEventListener(`click`, function () {
+  if (a === 0) {
+    // let listSpread []
+    listContent.textContent = `- ${arrTitles}`;
+    listContent.classList.remove(`hidden`);
+    a++;
+  } else {
+    listContent.classList.add(`hidden`);
+    a--;
+  }
+});
+
+console.log(arrTitles.split(, ,);
 
 ///////////////////////////////////////////////////
 // Broken Loop

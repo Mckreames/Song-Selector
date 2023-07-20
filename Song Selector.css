@@ -53,7 +53,7 @@ p {
     /* width: 100%; */
     /* border-radius: 100px; */
     /* color: rgb(240, 230, 165); */
-    padding: 1rem 1rem;
+    padding: 1rem;
     justify-content: space-between;
 }
 
@@ -176,3 +176,10 @@ img {
     display: none;
 }
 
+.song-list {
+    border: solid 1px black;
+    margin-top: 1rem;
+    border-radius: 15px;
+    background-color: rgb(214, 227, 229);
+    padding: 1rem;
+}
