@@ -67,6 +67,7 @@ const song1 = {
   artist: `Anthony Evans`,
   key: `E`,
   bpm: 124,
+  cover: `Album-Covers/Kim walker-smith.jpg`,
 };
 
 const song2 = {
@@ -74,6 +75,7 @@ const song2 = {
   artist: `Anthony Brown`,
   key: `D`,
   bpm: 114,
+  cover: `Album-Covers/Anthony Brown.jpg`,
 };
 
 const song3 = {
@@ -81,6 +83,7 @@ const song3 = {
   artist: `JJ Hairston`,
   key: `Gb`,
   bpm: 175,
+  cover: `Album-Covers/JJ Hairston.jpg`,
 };
 
 const song4 = {
@@ -88,6 +91,7 @@ const song4 = {
   artist: `Chris Tomlin`,
   key: `A`,
   bpm: 145,
+  cover: `Album-Covers/Chris Tomlin.jpg`,
 };
 
 const song5 = {
@@ -95,6 +99,7 @@ const song5 = {
   artist: `JJ Hairston`,
   key: `G`,
   bpm: 176,
+  cover: `Album-Covers/JJ Hairston.jpg`,
 };
 
 const song6 = {
@@ -102,6 +107,7 @@ const song6 = {
   artist: `Chris Tomlin`,
   key: `Db`,
   bpm: 156,
+  cover: `Album-Covers/Chris Tomlin.jpg`,
 };
 
 const song7 = {
@@ -109,6 +115,7 @@ const song7 = {
   artist: `William Murphy`,
   key: `G`,
   bpm: 92,
+  cover: `Album-Covers/William Murphey.jpg`,
 };
 
 const song8 = {
@@ -116,6 +123,7 @@ const song8 = {
   artist: `Pastor Charles Jenkins`,
   key: `E`,
   bpm: 128,
+  cover: `Album-Covers/Pastor Charles Jenkins.jpg`,
 };
 
 const song9 = {
@@ -123,6 +131,7 @@ const song9 = {
   artist: `Sinach`,
   key: `E`,
   bpm: 132,
+  cover: `Album-Covers/Sinach.png`,
 };
 
 const song10 = {
@@ -130,6 +139,7 @@ const song10 = {
   artist: `Cory Asbury`,
   key: `Gb`,
   bpm: 111,
+  cover: `Album-Covers/Cory Asbury.jpg`,
 };
 
 const song11 = {
@@ -137,6 +147,7 @@ const song11 = {
   artist: `Hillsong United`,
   key: `D`,
   bpm: 127,
+  cover: `Album-Covers/Hillsong United.jpg`,
 };
 
 const song12 = {
@@ -144,6 +155,7 @@ const song12 = {
   artist: `Kim Walker-Smith`,
   key: `D`,
   bpm: 144,
+  cover: `Album-Covers/Kim walker-smith.jpg`,
 };
 
 const song13 = {
@@ -151,6 +163,7 @@ const song13 = {
   artist: "Todd Dulaney",
   key: `F`,
   bpm: 147,
+  cover: `Album-Covers/Todd Dulaney.jpeg`,
 };
 
 const song14 = {
@@ -158,6 +171,7 @@ const song14 = {
   artist: `Joe Pace`,
   key: `Bb`,
   bpm: 99,
+  cover: `Album-Covers/Joe pace.webp`,
 };
 
 const song15 = {
@@ -165,6 +179,7 @@ const song15 = {
   artist: `People & Songs`,
   key: `E`,
   bpm: 63,
+  cover: `Album-Covers/people & songs.jpg`,
 };
 
 const song16 = {
@@ -172,6 +187,7 @@ const song16 = {
   artist: `Deitrick Hadden`,
   key: `B`,
   bpm: 115,
+  cover: `Album-Covers/Deitrick Haden.jpg`,
 };
 
 const arr = [
@@ -237,14 +253,15 @@ shuffle.addEventListener(`click`, function () {
       artist1.textContent = `Artist: ${songChoice.artist}`;
       key1.textContent = `Key: ${songChoice.key}`;
       bpm1.textContent = `BPM: ${songChoice.bpm}`;
+      document.getElementById(`#img1`).src = songChoice.cover;
       result1.classList.remove(`hidden`);
-      // cover1.src=""
     } else if (i === 2) {
       pre2.textContent = title2.textContent;
       title2.textContent = `Title: ${songChoice.title}`;
       artist2.textContent = `Artist: ${songChoice.artist}`;
       key2.textContent = `Key: ${songChoice.key}`;
       bpm2.textContent = `BPM: ${songChoice.bpm}`;
+      cover2.src = songChoice.cover;
       result2.classList.remove(`hidden`);
     } else if (i === 3) {
       pre3.textContent = title3.textContent;
@@ -252,6 +269,7 @@ shuffle.addEventListener(`click`, function () {
       artist3.textContent = `Artist: ${songChoice.artist}`;
       key3.textContent = `Key: ${songChoice.key}`;
       bpm3.textContent = `BPM: ${songChoice.bpm}`;
+      cover3.src = songChoice.cover;
       result3.classList.remove(`hidden`);
     } else if (i === 4) {
       pre4.textContent = title4.textContent;
@@ -259,6 +277,7 @@ shuffle.addEventListener(`click`, function () {
       artist4.textContent = `Artist: ${songChoice.artist}`;
       key4.textContent = `Key: ${songChoice.key}`;
       bpm4.textContent = `BPM: ${songChoice.bpm}`;
+      cover4.src = songChoice.cover;
       result4.classList.remove(`hidden`);
     } else {
       pre5.textContent = title5.textContent;
@@ -266,6 +285,7 @@ shuffle.addEventListener(`click`, function () {
       artist5.textContent = `Artist: ${songChoice.artist}`;
       key5.textContent = `Key: ${songChoice.key}`;
       bpm5.textContent = `BPM: ${songChoice.bpm}`;
+      cover5.src = songChoice.cover;
       result5.classList.remove(`hidden`);
     }
   }
