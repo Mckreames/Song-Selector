@@ -328,17 +328,27 @@ shuffle.addEventListener(`click`, function () {
     s++;
   }
   x.length = 0;
-  console.log(s);
-  console.log(w);
-  console.log(x);
-  console.log(y);
+  // console.log(s);
+  // console.log(w);
+  // console.log(x);
+  // console.log(y);
 });
 
 let a = 0; // If a = 0, list is hidden
+let arrTitlesStr;
+let songListChild = document.querySelector(`.song-list-child`);
+
 showSongs.addEventListener(`click`, function () {
   if (a === 0) {
     // let listSpread []
-    listContent.textContent = `- ${arrTitles}`;
+    // arrTitlesStr = arrTitles.toString();
+    // console.log(typeof(arrTitlesStr));
+    // listContent.textContent = arrTitlesStr.split(`,`).join("\t");
+    for (const title of arrTitles) {
+      const listItem = document.createElement(`li`);
+      listItem.textContent = title;
+      songListChild.appendChild(listItem);
+    }
     listContent.classList.remove(`hidden`);
     a++;
   } else {
@@ -347,7 +357,12 @@ showSongs.addEventListener(`click`, function () {
   }
 });
 
-console.log(arrTitles.split(, ,);
+// let splitsAndIsh = arrTitles.split(`,`);
+// let zplitzAndIzh = arrTitles.split('\t');
+// console.log(splitsAndIsh);
+// console.log(zplitzAndIzh);
+// console.log(arrTitles.split(","));
+// console.log(arrTitles.split("\t"));
 
 ///////////////////////////////////////////////////
 // Broken Loop
