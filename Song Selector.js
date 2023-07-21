@@ -338,17 +338,20 @@ let a = 0; // If a = 0, list is hidden
 let arrTitlesStr;
 let songListChild = document.querySelector(`.song-list-child`);
 
+window.addEventListener(`DOMContentLoaded`, function () {
+  for (const title of arrTitles) {
+    const listItem = document.createElement(`li`);
+    listItem.textContent = title;
+    songListChild.appendChild(listItem);
+  }
+});
+
 showSongs.addEventListener(`click`, function () {
   if (a === 0) {
     // let listSpread []
     // arrTitlesStr = arrTitles.toString();
     // console.log(typeof(arrTitlesStr));
     // listContent.textContent = arrTitlesStr.split(`,`).join("\t");
-    for (const title of arrTitles) {
-      const listItem = document.createElement(`li`);
-      listItem.textContent = title;
-      songListChild.appendChild(listItem);
-    }
     listContent.classList.remove(`hidden`);
     a++;
   } else {
