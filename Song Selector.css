@@ -16,7 +16,7 @@ body {
 
 .page {
     /* background-color:rgb(206, 215, 232); */
-    background-color:rgb(147, 170, 212);
+    background: linear-gradient(rgb(91, 109, 213), rgb(147, 170, 212), rgb(51, 76, 222));
     padding-bottom: 5rem;
     border-radius: 15px;
 }
@@ -35,7 +35,7 @@ h1 {
     color: rgb(230, 234, 241);
     font-weight: 10px;
     text-decoration: underline;
-    background-color: rgb(6, 6, 82);
+    background: linear-gradient(rgb(6, 6, 82), rgb(21, 29, 146), rgb(20, 28, 101));
     margin: 0;
     padding: 2rem;
     border-radius: 15px 15px 0 0;
@@ -71,12 +71,13 @@ p {
     margin: .1rem auto;
     font-size: 2rem;
     /* font-stretch: wider; */
-    color: white;
-    background-color:rgb(108, 108, 186);
+    color: black;
+    background-color:rgb(193, 193, 228);
 }
 
 .shuffle-btn:hover {
-    background-color: rgb(37, 37, 129)
+    color: white;
+    background-color: rgb(37, 37, 129);
 }
 
 .shuffle-btn:active {
@@ -90,8 +91,8 @@ hr {
 }
 
 .result {
-    border: 1px solid black;
-    background-color: rgb(214, 227, 229);
+    border: 2px solid black;
+    background: linear-gradient(rgb(171, 171, 171), rgb(220, 219, 219));
     /* background-color: white; */
     border-radius: 15px;
     width: 46%;
@@ -110,6 +111,7 @@ hr {
 .info-box {
     text-align: center;
     max-width: 100%;
+    /* border-left: solid 1px black; */
     /* max-height: 20%; */
 }
 
@@ -154,6 +156,8 @@ img {
     width: 25%;
     float: left;
     margin-top: 5%;
+    border-radius: 10%;
+    border: solid 1px black;
     /* display: inline-block; */
     /* margin: auto; */
     /* margin-bottom: 13%; */
@@ -169,6 +173,8 @@ img {
     margin: auto;
     height: 3rem;
     width: 15rem;
+    border-radius: 5%;
+    background-color:rgb(193, 193, 228);
 }
 
 .hidden {
