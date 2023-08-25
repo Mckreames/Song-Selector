@@ -3,6 +3,11 @@
 // for (let i = 1; i <= 6; i++) {
 //   let title = document.querySelector(`.title${i}`)
 // };
+
+// for (let i = 1; i <= 6; i++) {
+//   let cover(i) = document.getElementById(`#img${i}`);
+// }
+
 let cover1 = document.getElementById(`#img1`);
 let cover2 = document.getElementById(`#img2`);
 let cover3 = document.getElementById(`#img3`);
@@ -51,6 +56,9 @@ let listContent = document.querySelector(`.song-list`);
 let showSongs = document.querySelector(`.show-btn`);
 let addSongs = document.querySelector(`.add-btn`);
 let deleteSongs = document.querySelector(`.delete-btn`);
+
+let addBtn = document.querySelector(`.add-btn`);
+let deleteBtn = document.querySelector(`.delete-btn`);
 
 let songNumber = ``;
 let s = 0; // hidden class counter
@@ -278,7 +286,7 @@ shuffle.addEventListener(`click`, function () {
       artist1.textContent = `Artist: ${songChoice.artist}`;
       key1.textContent = `Key: ${songChoice.key}`;
       bpm1.textContent = `BPM: ${songChoice.bpm}`;
-      document.getElementById(`img1`).src = songChoice.cover;
+      document.getElementById(`img${i}`).src = songChoice.cover;
       result1.classList.remove(`hidden`);
     } else if (i === 2) {
       pre2.textContent = title2.textContent;
@@ -286,7 +294,7 @@ shuffle.addEventListener(`click`, function () {
       artist2.textContent = `Artist: ${songChoice.artist}`;
       key2.textContent = `Key: ${songChoice.key}`;
       bpm2.textContent = `BPM: ${songChoice.bpm}`;
-      document.getElementById(`img2`).src = songChoice.cover;
+      document.getElementById(`img${i}`).src = songChoice.cover;
       result2.classList.remove(`hidden`);
     } else if (i === 3) {
       pre3.textContent = title3.textContent;
@@ -294,7 +302,7 @@ shuffle.addEventListener(`click`, function () {
       artist3.textContent = `Artist: ${songChoice.artist}`;
       key3.textContent = `Key: ${songChoice.key}`;
       bpm3.textContent = `BPM: ${songChoice.bpm}`;
-      document.getElementById(`img3`).src = songChoice.cover;
+      document.getElementById(`img${i}`).src = songChoice.cover;
 
       result3.classList.remove(`hidden`);
     } else if (i === 4) {
@@ -303,7 +311,7 @@ shuffle.addEventListener(`click`, function () {
       artist4.textContent = `Artist: ${songChoice.artist}`;
       key4.textContent = `Key: ${songChoice.key}`;
       bpm4.textContent = `BPM: ${songChoice.bpm}`;
-      document.getElementById(`img4`).src = songChoice.cover;
+      document.getElementById(`img${i}`).src = songChoice.cover;
 
       result4.classList.remove(`hidden`);
     } else {
@@ -312,7 +320,7 @@ shuffle.addEventListener(`click`, function () {
       artist5.textContent = `Artist: ${songChoice.artist}`;
       key5.textContent = `Key: ${songChoice.key}`;
       bpm5.textContent = `BPM: ${songChoice.bpm}`;
-      document.getElementById(`img5`).src = songChoice.cover;
+      document.getElementById(`img${i}`).src = songChoice.cover;
       // cover5.src = songChoice.cover; // This didn't work to change img src whatever reason
       result5.classList.remove(`hidden`);
     }
@@ -376,3 +384,27 @@ showSongs.addEventListener(`click`, function () {
 // parent if statement content
 // x = arr.delete(songChoice, songChoice);
 // }
+
+addBtn.addEventListener(`click`, function () {
+  let i = 0;
+  if (i === 0) {
+    alert(`The "Add Song" button doesn't work yet`);
+    i++;
+  } else if (i === 1) {
+    alert(`I just said it doesn't work`);
+    i++;
+  } else if (i === 2) {
+    alert(`Stop clicking it`);
+    i++;
+  } else if (i === 3) {
+    alert(`Numb nuts.`);
+    i++;
+  }
+});
+
+deleteBtn.addEventListener(`click`, function () {
+  let i = 0;
+  if (i === 0) {
+    alert(`The "Delete Song button `);
+  }
+});
