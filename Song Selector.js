@@ -405,6 +405,6 @@ addBtn.addEventListener(`click`, function () {
 deleteBtn.addEventListener(`click`, function () {
   let i = 0;
   if (i === 0) {
-    alert(`The "Delete Song button `);
+    alert(`The "Delete Song" button doesn't work yet either`);
   }
 });
