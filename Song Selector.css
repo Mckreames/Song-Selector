@@ -22,12 +22,6 @@ body {
     /* border: 1px solid black; */
 }
 
-.purple {
-    /* background-color: rgb(156, 9, 169); */
-    /* background-color: rgb(22, 22, 198); */
-    /* background-color: white; */
-}
-
 h1 {
     text-align: center;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -51,11 +45,13 @@ p {
 }
 
 .shuffle-box {
-    /* width: 100%; */
-    /* border-radius: 100px; */
-    /* color: rgb(240, 230, 165); */
     padding: 5rem;
     justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    align-items: center;
+    justify-items: center;
     /* border: 1px solid black; */
 }
 
@@ -93,27 +89,46 @@ hr {
 }
 
 .result {
-    border: 2px solid black;
     background: linear-gradient(rgb(171, 171, 171), rgb(220, 219, 219));
-    /* background-color: white; */
     border-radius: 15px;
-    width: 40%;
-    height: 60%;
-    display: inline-block;
-    text-align: justify;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    /* padding: 0.5rem; */
+    box-shadow: 5px 5px 10px #424242;
+
+    /* border: 2px solid black; */
+}
+
+.result5 {
+    background: linear-gradient(rgb(171, 171, 171), rgb(220, 219, 219));
+    border-radius: 15px;
+    width: 50%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
     padding: 0.5rem;
-    max-width: 46%;
-    max-height: 80%;
-    /* min-height: 20%; */
+    box-shadow: 5px 5px 10px #424242;
+
+    /* border: 2px solid black; */
+}
+
+.result-img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
 }
 
 .info-box {
+    font-weight: bold;
     text-align: center;
     max-width: 100%;
-    /* border-left: solid 1px black; */
-    /* max-height: 20%; */
+    grid-column: span 3;
 }
 
 .previous {
@@ -132,35 +147,35 @@ hr {
 }
 
 .one {
-    float: left;
+    
 }
 
 .two {
-    float: right;
+    
 }
 
 .three {
-    float: left;
+    
 }
 
 .four {
-    float: right;
+    
 }
 
 .five {
-    margin-left: 27.5%;
-
+    grid-column: span 2;
 }
 
-img {
-    height: 20%;
-    width: 20%;
-    float: left;
-    object-fit: contain;
-    /* margin-top: 1%; */
-    /* display: block; */
-    /* margin: auto; */
-    /* margin-bottom: 13%; */
+.prev-result {
+    background: linear-gradient(rgb(171, 171, 171), rgb(220, 219, 219));
+    border-radius: 15px;
+    padding: 1rem;
+    width: 30%;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+    /* padding: 0.5rem; */
+    box-shadow: 5px 5px 10px #424242;
 }
 
 .interaction {
