@@ -1,33 +1,55 @@
+:root {
+    --cream: #ffffff; /*Primary Background*/
+    --blue: #87CEEB; /*Accents, Buttons, Highlights*/
+    --gray: #D3D3D3; /*Text And Boarders*/
+    --gold: #FFDc00; /*Headings or Icons*/
+
+    --lavender: #E6E6FA; /*warmer call to action button*/
+    --green: #98FB98; /*Contrast where needed*/
+}
+
 * {
 margin: none;
+padding: none;
 /* border: 1px solid black; */
 
 }
 
 body {
-    /* background-image: linear-gradient(to top, purple, white); */
-    background: linear-gradient(28deg, rgb(66, 68, 71), rgb(168, 169, 171) 30%);
+    /* background: linear-gradient(28deg, rgb(66, 68, 71), rgb(168, 169, 171) 30%); */
     /* margin-left: 10%;
     margin-right: 10%; */
     /* margin: auto; */
-    border: 1px solid black;
-    border-radius: 15px;
+
+    /* border: 1px solid black; */
+    /* border-radius: 15px; */
 }
 
 .page {
-    /* background-color:rgb(206, 215, 232); */
-    background: linear-gradient(rgb(91, 109, 213), rgb(147, 170, 212), rgb(51, 76, 222));
+    /* background: linear-gradient(rgb(91, 109, 213), rgb(147, 170, 212), rgb(51, 76, 222)); */
+    background-color: white;
     padding-bottom: 5rem;
     border-radius: 15px;
     /* border: 1px solid black; */
+}
+
+.logo {
+    width: 100%;
+    height: 15rem;
+    object-fit: contain;
+    padding: 3rem 0;
+    background-color: var(--blue);
+    border-radius: 5rem;
+    /* border: 1px solid black; */
+    grid-column: span 2;
 }
 
 h1 {
     text-align: center;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 45px;
-    /* color: rgb(6, 6, 82); */
-    color: rgb(230, 234, 241);
+    color: var(--gold);
+    /* color: rgb(230, 234, 241); */
     font-weight: 10px;
     text-decoration: underline;
     background: linear-gradient(rgb(6, 6, 82), rgb(21, 29, 146), rgb(20, 28, 101));
@@ -37,7 +59,7 @@ h1 {
 }
 
 p {
-    color:rgb(6, 6, 82);
+    color: black;
     /* text-decoration: underline; */
     /* border-bottom: 1px solid black; */
     font-size: 20px;
@@ -45,7 +67,7 @@ p {
 }
 
 .shuffle-box {
-    padding: 5rem;
+    /* padding: 5rem; */
     justify-content: space-between;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -70,12 +92,13 @@ p {
     font-size: 2rem;
     /* font-stretch: wider; */
     color: black;
-    background-color:rgb(193, 193, 228);
+    background-color: var(--blue);
+    /* background-color:rgb(193, 193, 228); */
 }
 
 .shuffle-btn:hover {
     color: white;
-    background-color: rgb(37, 37, 129);
+    background-color: var(--gold);
 }
 
 .shuffle-btn:active {
@@ -89,8 +112,10 @@ hr {
 }
 
 .result {
-    background: linear-gradient(rgb(171, 171, 171), rgb(220, 219, 219));
+    /* background: linear-gradient(rgb(171, 171, 171), rgb(220, 219, 219)); */
+    background-color: #D3D3D3;
     border-radius: 15px;
+    border: 3px groove var(--blue);
     width: 100%;
     height: 100%;
     display: grid;
@@ -99,13 +124,15 @@ hr {
     justify-items: center;
     /* padding: 0.5rem; */
     box-shadow: 5px 5px 10px #424242;
-
+    
     /* border: 2px solid black; */
 }
 
 .result5 {
-    background: linear-gradient(rgb(171, 171, 171), rgb(220, 219, 219));
+    /* background: linear-gradient(rgb(171, 171, 171), rgb(220, 219, 219)); */
+    background-color: #D3D3D3;
     border-radius: 15px;
+    border: 3px groove var(--blue);
     width: 50%;
     height: 90%;
     display: grid;
@@ -114,7 +141,7 @@ hr {
     justify-items: center;
     padding: 0.5rem;
     box-shadow: 5px 5px 10px #424242;
-
+    
     /* border: 2px solid black; */
 }
 
@@ -122,9 +149,12 @@ hr {
     width: 10rem;
     height: 10rem;
     object-fit: contain;
+    padding: 0 3rem;
+    border-right: 3px solid var(--blue);
 }
 
 .info-box {
+    color: white;
     font-weight: bold;
     text-align: center;
     max-width: 100%;
@@ -189,7 +219,8 @@ hr {
     height: 3rem;
     width: 15rem;
     border-radius: 5%;
-    background-color:rgb(193, 193, 228);
+    background-color: var(--blue);
+    /* background-color:rgb(193, 193, 228); */
 }
 
 .hidden {
