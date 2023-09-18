@@ -408,3 +408,18 @@ deleteBtn.addEventListener(`click`, function () {
     alert(`The "Delete Song" button doesn't work yet either`);
   }
 });
+
+// Menu Section
+
+let menuBtn = document.querySelector(`.menu-btn`);
+
+menuBtn.addEventListener(`click`, function () {
+  let i = 0;
+  if (i === 0) {
+    menuBtn.classList.remove(`hidden`);
+    i++;
+  } else {
+    menuBtn.classList.remove(`hidden`);
+    i--;
+  }
+});

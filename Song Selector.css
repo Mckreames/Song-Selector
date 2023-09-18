@@ -44,13 +44,14 @@ h1 {
     text-align: center;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 45px;
-    color: var(--gold);
+    color: black;
     /* color: rgb(230, 234, 241); */
     font-weight: 10px;
     text-decoration: underline;
     margin: 0;
     padding: 2rem;
-    border-radius: 15px 15px 0 0;
+    /* border-radius: 15px 15px 0 0; */
+    border-bottom: 3px solid var(--gray);
 }
 
 p {
@@ -60,6 +61,7 @@ p {
     font-size: 20px;
     font-family:Georgia, 'Times New Roman', Times, serif
 }
+
 
 .menu-btn {
     position: absolute;
@@ -79,7 +81,33 @@ p {
     left: 0;
     height: 100%;
     width: 25rem;
-    background-color: var(--cream);
+    background-color: var(--blue);
+    border: 5px double var(--dark-blue);
+    box-shadow: 5px 5px 10px #424242;
+}
+
+.menu-title {
+    font-size: 4rem;
+}
+
+nav {
+    /* display: flex; */
+    /* background: linear-gradient(90deg, var(--gold), var(--cream) 5%, var(--cream) 95%, var(--gold)); */
+}
+
+.nav-link {
+    cursor: pointer;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 3rem 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav-link:hover {
+    background-color: var(--blue);
+    color: white;
+    font-weight: bold;
 }
 
 .logo {
