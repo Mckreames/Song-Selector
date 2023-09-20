@@ -4,6 +4,7 @@
     --cream: rgb(250, 240, 230); /*Accents, Buttons, Highlights*/
     --gray: #89939E; /*Text And Boarders*/
     --gold: #FFDc00; /*Headings or Icons*/
+    --dark-gold: #E4C400;
 
     --lavender: #E6E6FA; /*warmer call to action button*/
     --green: #98FB98; /*Contrast where needed*/
@@ -12,6 +13,7 @@
 * {
 margin: none;
 padding: none;
+
 /* border: 1px solid black; */
 
 }
@@ -55,7 +57,7 @@ h1 {
 }
 
 p {
-    color: var(--gray);
+    color: black;
     /* text-decoration: underline; */
     /* border-bottom: 1px solid black; */
     font-size: 20px;
@@ -78,12 +80,13 @@ p {
 .menu {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -25%;
     height: 100%;
     width: 25rem;
     background-color: var(--blue);
     border: 5px double var(--dark-blue);
     box-shadow: 5px 5px 10px #424242;
+    transition: left 1s ease ;
 }
 
 .menu-title {
@@ -111,22 +114,28 @@ nav {
 }
 
 .logo {
-    width: 80%;
-    /* background: linear-gradient(rgb(6, 6, 82), rgb(21, 29, 146), rgb(20, 28, 101)); */
-    /* background: linear-gradient(120deg, var(--cream), var(--blue)); */
-    background-color: var(--cream);
+    width: 100%;
+    background-color: rgba(250, 240, 230, 0.925);
     height: 40rem;
+    padding: 4rem;
     object-fit: contain;
-    margin: 8rem auto;
-    padding: 4rem 0;
     border-radius: 5rem;
-    border: 10px double var(--blue);
+    border: 8px solid black;
     grid-column: span 2;
+    box-sizing: border-box;
 }
 
 .logo-box {
-    margin-bottom: 5rem;
-    width: 100%;
+    background-image: url('Pictures/Music-Background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 40rem;
+    border-radius: 5rem;
+    background-color: var(--cream);
+    margin: 5rem auto;
+    box-shadow: 5px 5px 10px #424242;
     /* border: 1px solid black; */
 }
 
@@ -155,13 +164,15 @@ nav {
     margin: .1rem auto;
     font-size: 2rem;
     font-weight: bold;
-    border: 3px solid var(--blue);
-    background: linear-gradient(var(--lavender), var(--gray));
+    border: 3px solid black;
+    background-color: var(--cream);
+    /* background: linear-gradient(var(--lavender), var(--gray)); */
 }
 
 .shuffle-btn:hover {
+    cursor: pointer;
     color: white;
-    background-color: var(--gold);
+    background-color: var(--dark-gold);
 }
 
 .shuffle-btn:active {
@@ -178,7 +189,7 @@ hr {
     background-color: var(--cream);
     /* background: linear-gradient(225deg, rgb(6, 6, 82), rgb(21, 29, 146)); */
     border-radius: 15px;
-    border: 8px double var(--blue);
+    border: 8px double black;
     width: 100%;
     height: 100%;
     display: grid;
@@ -195,7 +206,7 @@ hr {
     /* background: linear-gradient(135deg, rgb(6, 6, 82), rgb(21, 29, 146)); */
     background-color: var(--cream);
     border-radius: 15px;
-    border: 8px double var(--blue);
+    border: 8px double black;
     width: 50%;
     height: 90%;
     display: grid;
@@ -263,7 +274,7 @@ hr {
     /* background: linear-gradient(rgb(6, 6, 82), rgb(21, 29, 146), rgb(20, 28, 101)); */
     background-color: var(--cream);
     border-radius: 15px;
-    border: 8px double var(--blue);
+    border: 8px double black;
     padding: 1rem;
     width: 30%;
     height: 100%;

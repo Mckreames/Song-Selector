@@ -411,15 +411,22 @@ deleteBtn.addEventListener(`click`, function () {
 
 // Menu Section
 
-let menuBtn = document.querySelector(`.menu-btn`);
+let menuBtn = document.querySelector('.menu-btn');
+let menu = document.querySelector(`.menu`);
+let b = 0; // If b=0 then menu is hidden
 
 menuBtn.addEventListener(`click`, function () {
-  let i = 0;
-  if (i === 0) {
-    menuBtn.classList.remove(`hidden`);
-    i++;
+  if (b === 0) {
+    // menu.classList.remove(`hidden`);
+    menu.style.left = `0`;
+    console.log(`Unhidden`);
+    b++;
+    console.log(`'i' incrimented`);
   } else {
-    menuBtn.classList.remove(`hidden`);
-    i--;
+    // menu.classList.add(`hidden`);
+    menu.style.left = `-25%`;
+    console.log(`hidden`);
+    b--;
+    console.log(`"i" decrimented`);
   }
 });
