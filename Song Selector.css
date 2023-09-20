@@ -13,6 +13,7 @@
 * {
 margin: none;
 padding: none;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 
 /* border: 1px solid black; */
 
@@ -91,6 +92,7 @@ p {
 
 .menu-title {
     font-size: 4rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 nav {
@@ -322,4 +324,31 @@ hr {
 
 .song-list-child {
     text-align: left;
+}
+
+footer {
+    height: 10rem;
+    text-align: center;
+    width: 100%;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: grey;
+    background: rgb(14, 39, 71);
+}
+
+footer > p {
+    color: rgb(87, 87, 87);
+    font-size: .8rem;
+    margin: auto 0;
+}
+
+footer a {
+    color: #67789c;
+
+}
+
+footer a:visited {
+    color: #67789c;
 }
