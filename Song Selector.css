@@ -66,10 +66,16 @@ p {
 }
 
 
-.menu-btn {
-    position: absolute;
-    top: 1rem;
+.menu-btn-container {
+    position: sticky;
     left: 2rem;
+    top: 1rem;
+    margin-left: 1rem;
+    z-index: 99;
+}
+
+.menu-btn {
+    position: sticky;
     z-index: 4;
 }
 
@@ -85,15 +91,18 @@ p {
     height: 100%;
     width: 25rem;
     color: black;
-    background-color: rgb(249, 249, 230);
+    /* background-color: rgb(249, 249, 230); */
+    background-color: rgb(247, 240, 231);
     border: 5px double var(--dark-blue);
     box-shadow: 5px 5px 10px #424242;
     transition: left 1s ease ;
 }
 
 .menu-title {
-    font-size: 3rem;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    /* font-family:'Allura', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family:serif;
     background-color: var(--dark-blue);
     color: var(--dark-gold);
     text-decoration: none;
@@ -106,11 +115,11 @@ nav {
 
 .nav-link {
     cursor: pointer;
-    font-size: 3rem;
+    font-size: 2.7rem;
     font-weight: bold;
     margin: 3rem 0;
     text-decoration: none;
-    list-style: none;
+    list-style: square;
 }
 
 .nav-link:hover {
@@ -146,6 +155,7 @@ nav li {
     background-color: var(--cream);
     margin: 5rem auto;
     box-shadow: 5px 5px 10px #424242;
+    /* position:; */
     /* border: 1px solid black; */
 }
 
