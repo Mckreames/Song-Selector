@@ -92,7 +92,7 @@ p {
     width: 25rem;
     color: black;
     /* background-color: rgb(249, 249, 230); */
-    background-color: rgb(247, 240, 231);
+    background-color: rgb(250, 231, 231);
     border: 5px double var(--dark-blue);
     box-shadow: 5px 5px 10px #424242;
     transition: left 1s ease ;
@@ -108,17 +108,11 @@ p {
     text-decoration: none;
 }
 
-nav {
-    /* display: flex; */
-    /* background: linear-gradient(90deg, var(--gold), var(--cream) 5%, var(--cream) 95%, var(--gold)); */
-}
-
 .nav-link {
     cursor: pointer;
     font-size: 2.7rem;
     font-weight: bold;
-    margin: 3rem 0;
-    text-decoration: none;
+    margin: 5rem 0;
     list-style: square;
 }
 
@@ -126,10 +120,6 @@ nav {
     background-color: var(--blue);
     color: white;
     font-weight: bold;
-}
-
-nav li {
-    text-decoration: underline;
 }
 
 .logo {
