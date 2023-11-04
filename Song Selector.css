@@ -81,8 +81,11 @@ p {
 
 .menu-btn:hover {
     cursor: pointer;
-    
 }
+
+/* .menu-btn-container:active {
+    border: var(--dark-gold);
+} */
 
 .menu {
     position: absolute;
