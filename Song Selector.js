@@ -411,7 +411,7 @@ deleteBtn.addEventListener(`click`, function () {
 
 // Menu Section
 
-let menuBtn = document.querySelector('.menu-btn');
+let menuBtn = document.querySelector(".menu-btn");
 let menu = document.querySelector(`.menu`);
 let b = 0; // If b=0 then menu is hidden
 
@@ -424,7 +424,7 @@ menuBtn.addEventListener(`click`, function () {
     console.log(`'i' incrimented`);
   } else {
     // menu.classList.add(`hidden`);
-    menu.style.left = `-25%`;
+    menu.style.left = `-55%`;
     console.log(`hidden`);
     b--;
     console.log(`"i" decrimented`);
