@@ -424,7 +424,7 @@ menuBtn.addEventListener(`click`, function () {
     console.log(`'i' incrimented`);
   } else {
     // menu.classList.add(`hidden`);
-    menu.style.left = `-55%`;
+    menu.style.left = `-5``````````````````````````````````````````````````````````````````````````````````````````````5%`;
     console.log(`hidden`);
     b--;
     console.log(`"i" decrimented`);
